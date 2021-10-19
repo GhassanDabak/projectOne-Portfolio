@@ -13,7 +13,6 @@ body {
   height:100%;
   width:100%;
   box-sizing: border-box;
-  /* font-size:16px; */
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -23,13 +22,14 @@ body {
   display:flex;
   justify-content: space-between;
   padding: 1em;
-  width:90%;
+  max-width:100%;
   margin:auto;
   align-items: center;
+  background-color:white;
 }
 
 .nav-left h1 a {
-  text-decoration: none;
+  text-decoration:none;
 }
 
 .navbar .nav-right ul li{
@@ -40,7 +40,7 @@ body {
 }
 
 .navbar i {
-  font-size: 2em;
+  font-size: 2.4em;
   display:none;
 }
 
@@ -52,16 +52,14 @@ body {
 
 .navbar .nav-right ul li a:hover {
   color:coral;
+  text-decoration: underline;
 }
 
 .nav-right ul {
-  /* background-color: rgb(94, 94, 88); */
   display:flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items:center;
-
 }
-
 
 .nav-left h1 {
   font-family: 'Sacramento', cursive;
@@ -72,19 +70,81 @@ body {
   font-size:1.5em;
 }
 
+.navbar button{
+  padding: 0.5em 2em;
+  border-radius:0.3em;
+  background-color:black;
+  color:white;
+  font-size: 1em;
+  border:none;
+  opacity:0.6;
+}
+
+.burgermenu {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center; 
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 10em;
+  height: 2em;
+  border-radius:0.3em;
+  cursor: pointer;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* .flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+} */
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding-top:0.5em;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #b8b8b8;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color:coral;
+  color: white;
+  transform: rotateY(180deg);
+}
+
 /*End of navbar/*
 
 /* Start of body image */
 
 .image-section {
-  /* background-color:chartreuse; */
   background-image:url(./Assests/me4.jpeg);
   background-color:#ccc;
-  height:110vh;
+  height:86vh;
   background-size:cover;
   background-repeat: no-repeat;
   background-position:center;
-  width:100%;
+  min-width:100%;
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -94,7 +154,6 @@ body {
 
 .empty {
   width:40%;
-  /* background-color: yellow; */
 }
 
 .title span {
@@ -102,7 +161,6 @@ body {
 }
 
 .title {
-  /* background-color:red; */
   display:flex;
   width:30%;
   line-height: 2em;
@@ -121,15 +179,26 @@ body {
   border:none;
   margin-top:1em;
   opacity:0.6;
+  cursor: pointer;
 }
 
 .image-section .title button:hover {
   opacity:1;
 }
 
+.scrollhide{
+  color:coral;
+  font-size:1.5em;
+  position:fixed;
+  right:1.5em;
+  bottom:1.5em;
+  visibility: hidden;
+}
+
 /* end of image section */
 
 /* start of services section */
+
 .services {
   width:80%;
   display:flex;
@@ -150,39 +219,20 @@ body {
   line-height: 1.5em;
 }
 
-.ui {
+.card {
   border:0.1px solid black;
   align-items: center;
-  display:flex;
-  flex-direction: column;
   border-radius:1em;
   width:30%;
   margin-top:2.5em;
-  transition:0.5s;
+  background: linear-gradient(to top, coral 50%, white 50%);
+  background-size: 100% 200%;
+  transition: all 0.8s;
 }
 
-
-.web {
- width:30%;
- border:1px solid black;
- margin-top:2.5em;
- border-radius:1em;
- transition:0.5s;
-
-}
-
-.mob {
-  width:30%;
-  border:1px solid black;
-  margin-top:2.5em;
-  border-radius:1em;
-  transition:0.5s;
-
-}
-
-
-.row-display img {
-  margin:3em 3em 1em 3em;
+.row-display .card i {
+  padding:0.5em;
+  font-size:3em;
 }
 
 .row-display p{
@@ -193,10 +243,11 @@ body {
   font-size:1.2em;  
 }
 
-.web:hover, .mob:hover, .ui:hover{
-  background-color: coral;
+.card:hover {
+  background-position:left bottom;
   color:white;
   border:none;
+  box-shadow:0 0 1em coral;
 }
 
 /* End of services */
@@ -210,6 +261,22 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top:5em;
+}
+
+.display {
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.wid {
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
 }
 
 .bar {
@@ -246,6 +313,11 @@ body {
 
 .mar {
   margin:5em;
+}
+
+.img-size {
+  height:70px;
+  width:70px;
 }
 
 /* End of Skills */
@@ -286,17 +358,40 @@ body {
 
 /* End of Projects */
 
-/*  */
+/* Start of Testimonials */
 
-.pos {
+.testimonials {
   width:80%;
+  display:flex;
+  flex-direction: column;
   margin:auto;
-  border:1px solid black;
+  text-align: center;
+  margin-top:5em;
 }
 
-.row-display i {
+.row-display {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 1.5em;
+}
+
+.test-cards {
+  border:0.1px solid black;
+  align-items: center;
+  border-radius:1em;
+  width:30%;
+  margin-top:2.5em;
+}
+
+.test-cards img {
+  height:6em;
+  width:6em;
+  /* line-height: 1; */
+}
+
+.test-cards i {
   color:gold;
-  margin-bottom:2em;
 }
 
 /* End of Testimonials */
@@ -387,7 +482,7 @@ body {
 .info span {
   font-family: 'Sacramento', cursive;
   color:coral;
-  font-size:2em;
+  font-size:2em;  
 }
 
 .ma {
@@ -396,9 +491,66 @@ body {
 
 /* End of footer */
 
+/* Start of Dark Mode Classes */
+
+.dark-mode {
+  background-color: #343a40;
+  color:white;
+}
+
+.dark-mode .navbar{
+  background-color:#343a40;
+}
+
+.dark-mode .navbar .nav-right ul li a{
+  color:white;
+}
+
+.dark-mode .flip-box .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.dark-mode .cont {
+  background-color:#757678;
+}
+
+.dark-mode .card {
+  border:1px solid white;
+  background: linear-gradient(to top, #757678 50%, #343A40 50%);
+  background-size: 100% 200%;
+}
+
+.dark-mode .contact {
+  background-image:url(./Assests/info-bar.jpg);
+}
+
+.dark-mode .image-section {
+  background-image:url(./Assests/ghassan.jpg);
+}
+
+.dark-mode .image-section .title button{
+  background-color:#343A40;
+  opacity:0.6;
+  border:1px solid white;
+}
+
+.dark-mode .card:hover {
+  box-shadow:0 0 0.5em white;
+  background-position: left bottom; 
+}
+
+.dark-mode .image-section .title button:hover {
+  opacity:1;
+}
+
+/* End of Dark Mode Classes */
+
 /* Media Query */
 
 @media screen and (max-width:1000px){
+  body{
+    font-size:10px;
+  }
   .navbar {
     flex-direction: column;
     justify-content: center;
@@ -408,13 +560,27 @@ body {
     padding:1em;
   }
   .image-section {
-    font-size:1.1em;
-  }
+    font-size:1.5em;
+    height:60vh;
+    }
   .contact {
     font-size: 1.1em;
   }
   .contact-info {
     width:70%;
+  }
+  .contact{
+    height:30vh;
+  }
+  .burgermenu {
+    width:30%;
+    justify-content: center;
+    top:1em;
+    right:1em;
+
+  }
+  .scrollhide {
+    font-size:2em;
   }
 }
 
@@ -443,6 +609,20 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
+  .image-section {
+    height:45vh;
+  }
+  .contact {
+    height:25vh;
+    font-size:1.2em;
+  }
+  .burgermenu{
+    width:40%;
+    justify-content: space-between;
+  }
+  .scrollhide {
+    right:1em;
+  }
 }
 
 @media screen and (max-width:620px) {
@@ -456,7 +636,7 @@ body {
     font-size:0.7em;
   }
   .contact {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   .contact-info {
     width:90%;

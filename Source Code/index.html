@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="gototop">
 
 <head>
   <meta charset="UTF-8">
@@ -8,22 +8,25 @@
   <meta name="description" content="Ghassan Dabak's Portfolio for Full-Stack Development">
   <meta name="keywords"
     content="Full-stack,development,ghassan,dabak,portfolio,html,css,bootstrap,wordpress,java,javascript,web,developer">
+  <meta name="color-scheme" content="dark light">
   <title>Ghassan Dabak Portfolio</title>
-  <link rel="icon" href="./Assests/logo1-modified.png">
+  <link rel="icon" href="./Assests/logo2.png">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
   <!-- Header -->
-  <header class="navbar">
+
+  <header class="navbar" id="gotop">
     <div class="nav-left">
-      <h1><a href=".">Ghassan Dabak</a></h1>
+      <h1><a href="." >Ghassan Dabak</a></h1>
     </div>
     <div class="nav-right">
 
-      <ul>
+      <ul id="glow">
         <li><a href="#services">Services</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -31,7 +34,20 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <i class="fas fa-bars"></i>
+    <div class="burgermenu">
+      
+    <i class="fas fa-bars" id="bm"></i>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <p>Dark Mode</p>
+        </div>
+        <div class="flip-box-back">
+          <p>Light Mode</p>
+        </div>
+      </div>
+    </div>
+    </div>
   </header>
 
   <!-- End of Header -->
@@ -48,8 +64,9 @@
     <div class="empty">
 
     </div>
+    <a href="#gototop"><i class="scrollhide fas fa-arrow-alt-circle-up"></i></a>
   </div>
-
+  
   <!-- End of Image Section -->
 
   <!-- Services Section -->
@@ -60,9 +77,9 @@
       <h2>You will get from me</h2>
     </div>
     <div class="row-display">
-      <div class="ui">
+      <div class="card">
         <div>
-          <div><img src="./Assests/ui.png" alt="UI/UX" width="50" height="50"></div>
+          <i class="fas fa-pen-nib"></i>
         </div>
         <div>
           <h2>UI/UX Design</h2>
@@ -73,23 +90,23 @@
           </p>
         </div>
       </div>
-      <div class="web">
+      <div class="card">
         <div>
-          <div><img src="./Assests/web dev.png" alt="Web Development" width="50" height="50"></div>
+          <i class="fal fa-laptop-code"></i>
         </div>
         <div>
           <h2>Website</h2>
         </div>
         <div>
           <p>
-            Delivering a fully functional and responsive website with the passion for building your website within the time, high quality, performance and security for a better experience.
-
+            Delivering a fully functional and responsive website with the passion for building your website within the
+            time, high quality, performance and security for a better experience.
           </p>
         </div>
       </div>
-      <div class="mob">
+      <div class="card">
         <div>
-          <div><img src="./Assests/mob.png" alt="Mobile App Development" width="50" height="50"></div>
+          <i class="fal fa-mobile"></i>
         </div>
         <div>
           <h2>Mobile App</h2>
@@ -111,29 +128,38 @@
     <div class="mar">
       <h2 class="font">My Skills</h2>
     </div>
-    <div>
-      <h3>HTML</h3>
-    </div>
-    <div class="bar">
-      <div class="skill html">100%</div>
-    </div>
-    <div>
-      <h3>CSS</h3>
-    </div>
-    <div class="bar">
-      <div class="skill css">50%</div>
-    </div>
-    <div>
-      <h3>PHP</h3>
-    </div>
-    <div class="bar">
-      <div class="skill php">10%</div>
-    </div>
-    <div>
-      <h3>JS</h3>
-    </div>
-    <div class="bar">
-      <div class="skill js">20%</div>
+    <div class="wid">
+      <div class="display">
+        <div>
+          <img class="img-size" src="Assests/html.png" alt="HTML5 Logo">
+        </div>
+        <div class="bar">
+          <div class="skill html">100%</div>
+        </div>
+        <div>
+          <img class="img-size" src="Assests/css.png" alt="CSS3 Logo">
+        </div>
+      
+      
+        <div class="bar">
+          <div class="skill css">50%</div>
+        </div>
+      </div>
+        <div class="display">
+        <div>
+          <img class="img-size" src="Assests/php.png" alt="PHP Logo">
+        </div>
+        <div class="bar">
+          <div class="skill php">10%</div>
+        </div>
+        <div>
+          <img class="img-size" src="Assests/java.png" alt="JavaScript Logo">
+        </div>
+        <div class="bar">
+          <div class="skill js">20%</div>
+        </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -172,14 +198,14 @@
 
   <!-- Testimonials -->
 
-  <div class="services" id="test">
+  <div class="testimonials" id="test">
     <div>
       <h2 class="font">Testimonials</h2>
     </div>
     <div class="row-display">
-      <div class="ui">
+      <div class="test-cards">
         <div>
-          <div><img src="./Assests/zaid.png" alt="Zaid Samamaah" width="50%" height="50%"></div>
+          <div><img src="./Assests/zaid.png" alt="Zaid Samamaah"></div>
         </div>
         <div>
           <i class="fas fa-star"></i>
@@ -194,13 +220,14 @@
         </div>
         <div>
           <p>
-            Great web developers can be pretty difficult to find sometimes. Luckily I came across Ghassan, he developed my website exactly to my very specific specifications. I highly recommend.
+            Great web developers can be pretty difficult to find sometimes. Luckily I came across Ghassan, he developed
+            my website exactly to my very specific specifications. I highly recommend.
           </p>
         </div>
       </div>
-      <div class="web">
+      <div class="test-cards">
         <div>
-          <div><img src="./Assests/Abdallah.png" alt="Abdallah Marei" width="50%" height="50%"></div>
+          <div><img src="./Assests/Abdallah.png" alt="Abdallah Marei"></div>
         </div>
         <div>
           <i class="fas fa-star"></i>
@@ -215,13 +242,14 @@
         </div>
         <div>
           <p>
-            Ghassan have really helped me with developing a successful website with the features that I dreamed about. I am very impressed by the result and excited for future developments.
+            Ghassan have really helped me with developing a successful website with the features that I dreamed about. I
+            am very impressed by the result and excited for future developments.
           </p>
         </div>
       </div>
-      <div class="mob">
+      <div class="test-cards">
         <div>
-          <div><img src="./Assests/mahdi.png" alt="Mahdi Suleiman" width="50%" height="50%"></div>
+          <div><img src="./Assests/mahdi.png" alt="Mahdi Suleiman"></div>
         </div>
         <div>
           <i class="fas fa-star"></i>
@@ -235,7 +263,8 @@
           <h3>QA Engineer</h3>
         </div>
         <div>
-          <p>Thanks to Ghassan we are able to gain our customers trust and work towards giving them better services. Our website has pushed our company to success. I highly recommend his services.
+          <p>Thanks to Ghassan we are able to gain our customers trust and work towards giving them better services. Our
+            website has pushed our company to success. I highly recommend his services.
           </p>
         </div>
       </div>
@@ -250,15 +279,16 @@
   <div>
     <div class="contact" id="contact">
       <h2>We would like to hear from <span>you</span>!</h2>
-      <p>Wether you have a question about features, trials, pricing, need to chat, or consultation, I'm ready to answer all your questions</p>
+      <p>Wether you have a question about features, trials, pricing, need to chat, or consultation, I'm ready to answer
+        all your questions</p>
     </div>
   </div>
   <div class="container1">
     <div class="contact-info">
       <h2 class="font">Contact Information</h2>
-      <h2>Email: ghassan.h.dabak@gmail.com</h2>
-      <h2>Mobile: +962 777 69 3248</h2>
-      <h2>Location: Amman, Jordan</h2>
+      <h2><i class="fal fa-envelope"></i> ghassan.h.dabak@gmail.com</h2>
+      <h2><i class="fal fa-phone-square-alt"></i> +962 777 69 3248</h2>
+      <h2><i class="fal fa-location-circle"></i> Amman, Jordan</h2>
     </div>
     <div>
     </div>
@@ -268,27 +298,33 @@
 
   <!-- Footer -->
 
-<footer>
-  <div class="cont">
-    <div class="mid">
-      <div class="info">
-        <div class="icon">
-          <div><a href="https://www.linkedin.com/in/ghassan-dabak/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <footer>
+    <div class="cont">
+      <div class="mid">
+        <div class="info">
+          <div class="icon">
+            <div><a href="https://www.linkedin.com/in/ghassan-dabak/" target="_blank"><i
+                  class="fab fa-linkedin"></i></a>
+            </div>
+            <div><a href="https://github.com/GhassanDabak" target="_blank"><i class="fab fa-github"></i></a></div>
+            <div><a href="mailto:ghassan.h.dabak@gmail.com" target="_blank"><i class="fas fa-at"></i></a></div>
           </div>
-          <div><a href="https://github.com/GhassanDabak" target="_blank"><i class="fab fa-github"></i></a></div>
-          <div><a href="mailto:ghassan.h.dabak@gmail.com"><i class="fas fa-at"></i></a></div>
-        </div>
-        <div class="ma">
-          <p>Copyright &copy;2021 All rights reserved | Powered by <span>Ghassan Dabak</span></p>
+          <div class="ma">
+            <p>Copyright &copy;2021 All rights reserved | Powered by <span>Ghassan Dabak</span></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- End of Footer -->
+  
+  <!-- JavaScript File -->
+  
+  <script src="demo.js"></script>
+  
 </body>
 
 </html>
 
-<!-- End of The Whole Project -->
+<!-- End of Portfolio -->
